@@ -22,8 +22,8 @@ const OpenStreetMap = ({ latitude, longitude, zoom }) => {
 
 export const GoogleBox = () => {
     // Replace with your actual latitude, longitude, and zoom values
-    const latitude = 37.7749;
-    const longitude = -122.4194;
+    const latitude = -1.9706;
+    const longitude = 30.1044;
     const zoom = 12;
   
     return (
