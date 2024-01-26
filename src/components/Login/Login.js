@@ -30,7 +30,7 @@ const Signup = () => {
       <label htmlFor="password">Password</label>
       <input type="text" id="password" name="password" required className="inputOne" />
 
-      <button className="register-btn">Register</button>
+      <button className="register-btn"><Link to="/">Register</Link></button>
     </div>
     </div>
   );
@@ -48,7 +48,7 @@ const Login = () => {
       <label htmlFor="loginPassword">Password</label>
       <input type="text" id="loginPassword" name="loginPassword" required className="inputOne" />
       <p>Not a member? <Link to="/signup">Sign up here</Link></p>
-      <button className="register-btn">Login</button>
+      <button className="register-btn"><Link to="/">Login</Link></button>
     </div>
     </div>
   );
