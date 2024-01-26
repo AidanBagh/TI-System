@@ -13,7 +13,7 @@ const DashboardClient = () => {
 
   return (
     <div>
-      <div style={{ display: 'flex', height: '100vh' }}>
+      <div style={{ display: 'flex', height: '100vh' }} className='dashclient'>
         <div className='ver-navbar'>
           <p className={selectedOption === 'Kigali' ? 'selected' : ''} onClick={() => handleOptionClick('Kigali')}>Kigali</p>
           <p className={selectedOption === 'OutsideKigali' ? 'selected' : ''} onClick={() => handleOptionClick('OutsideKigali')}>Outside Kigali</p>
