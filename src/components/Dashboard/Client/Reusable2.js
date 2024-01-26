@@ -28,7 +28,7 @@ export const GoogleBox = () => {
   
     return (
       <div>
-        <h1>OpenStreetMap Example</h1>
+        <h1>TI System</h1>
         <OpenStreetMap latitude={latitude} longitude={longitude} zoom={zoom} />
       </div>
     );
