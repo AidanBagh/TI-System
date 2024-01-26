@@ -30,7 +30,6 @@ export const LocationSelect = ({ onSelect }) => {
 export const KigaliPage = () => {
     return (
       <div>
-        <p>Hello</p>
         <GoogleBox />
       </div>
       
