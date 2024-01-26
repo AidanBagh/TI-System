@@ -1,0 +1,77 @@
+/* Updated styles for the login page */
+.loginPage {
+  margin: 0;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  min-height: 100vh;
+  background: linear-gradient(to bottom right, white, #6c72ff);
+}
+
+.login-container {
+  margin: auto;
+  padding: 20px;
+  border-radius: 5px;
+  margin-top: 50px;
+  box-shadow: 0 0 10px rgba(0, 0, 0, 0.2);
+  justify-content: center; /* Horizontal centering */
+  align-items: center; /* Vertical centering */
+  margin-bottom: 20px;
+  display: flex; /* Ensure children are stacked vertically */
+  flex-direction: column; /* Stack children vertically */
+}
+
+.inputOne {
+  width: 250px;
+  height: 25px;
+  border-radius: 10px;
+  padding: 10px;
+  box-shadow: 0 0 10px rgba(0, 0, 0, 0.2);
+  background-color: transparent;
+  border: none;
+  margin: 10px;
+  text-align: center;
+}
+
+/* If you want to center the input vertically within the container */
+.login-container .inputOne {
+  align-self: center;
+}
+
+label {
+  display: block;
+}
+
+.register-btn {
+  background-color: #6c72ff;
+  color: white;
+  border: none;
+  width: 80%;
+  border-radius: 15px;
+  padding: 10px;
+  margin: 10px;
+  font-weight: bold;
+}
+
+.selectOne{
+  
+  border-radius: 10px;
+  padding: 10px;
+  box-shadow: 0 0 10px rgba(0, 0, 0, 0.2);
+  background-color: transparent;
+  border: none;
+  margin: 10px;
+  text-align: center;
+}
+.selectOne:focus{
+  outline: none;
+}
+
+.inputOne:focus{
+  outline: none;
+}
+
+.register-btn:hover{
+  background-color: #7679eb;
+}
+
