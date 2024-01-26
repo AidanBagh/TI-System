@@ -46,6 +46,7 @@
     justify-content: space-around;
     align-items: center;
     height: 50px;
+    margin-right: 10px;
   }
 
   .ver-navbar p {
@@ -55,4 +56,9 @@
   .dashclient{
     flex-direction: column;
   }
+}
+
+.userIcon{
+  margin-bottom: 10px;
+  color: white;
 }
