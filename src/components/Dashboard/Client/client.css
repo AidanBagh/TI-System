@@ -36,11 +36,22 @@
   }
   
 
-  /* 
-  Driver accepting or refusing
-    tarcking both
-    safe border 
-    security g{
-        no mouvement get notified
-    } 
-  */
+.kigaliBox {
+  height: 100%;
+  display: flex; /* Use flexbox to arrange children horizontally */
+  
+}
+
+.infoBox {
+  flex: 1; /* Take up 50% of the width */
+  height: 100%;
+  border-radius: 15px;
+  background-color: #e3f2fd;
+}
+
+.googleBox {
+  flex: 1; /* Take up 50% of the width */
+  height: 100%;
+  border-radius: 15px;
+  margin-left: 10px;
+}
