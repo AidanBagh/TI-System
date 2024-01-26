@@ -1,9 +1,10 @@
-// OpenStreetMap.js
+// Reusable2.js
 
 import React from 'react';
 import { MapContainer, TileLayer } from 'react-leaflet';
 import 'leaflet/dist/leaflet.css';
 import './client.css'
+import { FaUser } from 'react-icons/fa';
 
 
 const OpenStreetMap = ({ latitude, longitude, zoom }) => {
@@ -35,11 +36,37 @@ export const GoogleBox = () => {
     );
   };
 
+  const ProfileBox = () => {
+    // Placeholder data
+    const profilePictureUrl = 'https://example.com/profile-picture.jpg'; // Replace with actual URL
+    const name = 'John Doe';
+    const price = '$50';
+    const address = '123 Main St, City';
+  
+    return (
+      <div className="profile-box">
+        <div className="profile-picture">
+          <FaUser/>
+        </div>
+        <div className="profile-info">
+          <div className="name">{name}</div>
+          <div className="address">{address}</div>
+        </div>
+        <div className="price">{price}</div>
+      </div>
+    );
+  };
 
-  export const InfoBox = () =>{
+
+  export const InfoBoxKigali = () =>{
     return(
       <div className='infoBox'>
-        <h3>Services Screen</h3>
+        <h3>Kigali Services Screen</h3>
+        <div className='profilesBox'>
+          <ProfileBox/>
+          <ProfileBox/>
+          <ProfileBox/>
+        </div>
       </div>
     )
   }
