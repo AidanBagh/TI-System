@@ -3,13 +3,15 @@
 import React from 'react';
 import { MapContainer, TileLayer } from 'react-leaflet';
 import 'leaflet/dist/leaflet.css';
+import './client.css'
+
 
 const OpenStreetMap = ({ latitude, longitude, zoom }) => {
   return (
     <MapContainer
       center={[latitude, longitude]}
       zoom={zoom}
-      style={{ width: '100%', height: '400px' }}
+      style={{ width: '100%', height: '100%'}}
     >
       <TileLayer
         url="https://{s}.tile.openstreetmap.org/{z}/{x}/{y}.png"
@@ -27,11 +29,17 @@ export const GoogleBox = () => {
     const zoom = 12;
   
     return (
-      <div>
-        <h1>TI System</h1>
+      <div className='googleBox'>
         <OpenStreetMap latitude={latitude} longitude={longitude} zoom={zoom} />
       </div>
     );
   };
 
 
+  export const InfoBox = () =>{
+    return(
+      <div className='infoBox'>
+        <h3>Services Screen</h3>
+      </div>
+    )
+  }
