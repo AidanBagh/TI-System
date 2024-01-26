@@ -2,6 +2,7 @@
 
 import React, { useState } from 'react';
 import './client.css'
+import { GoogleBox } from './Reusable2';
 
 export const LocationSelect = ({ onSelect }) => {
   const [selectedLocation, setSelectedLocation] = useState('');
@@ -29,9 +30,10 @@ export const LocationSelect = ({ onSelect }) => {
 export const KigaliPage = () => {
     return (
       <div>
-        <h2>Welcome to Kigali Services</h2>
-        {/* Add content specific to Kigali */}
+        <p>Hello</p>
+        <GoogleBox />
       </div>
+      
     );
   };
 
