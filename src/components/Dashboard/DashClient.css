@@ -1,0 +1,38 @@
+/* DashClient.css */
+.ver-navbar {
+    background-color: black;
+    height: 100%;
+    color: white;
+    padding: 10px;
+    padding-left: 20px;
+    padding-right: 20px;
+    margin-left: 10px;
+    margin-top: 5px;
+    margin-bottom: 10px;
+    border-radius: 10px;
+    justify-content: center;
+    align-items: center;
+    display: flex;
+    flex-direction: column;
+  }
+  
+  .ver-navbar p {
+    cursor: pointer;
+    margin: 1px;
+    transition: color 0.3s;
+     /* Smooth transition for color changes */
+     background-color: black;
+     padding: 10px;
+
+  }
+  
+  .ver-navbar p:hover {
+    color: lightgray; /* Change the color on hover */
+  }
+  
+  .ver-navbar p.selected {
+    background-color: white;
+    border-radius: 10px;
+    color: black; /* Adjust color for the selected button */
+  }
+  
