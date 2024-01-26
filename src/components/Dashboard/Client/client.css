@@ -1,72 +1,96 @@
-// Reusable2.js
+/* Client.css */
 
-import React from 'react';
-import { MapContainer, TileLayer } from 'react-leaflet';
-import 'leaflet/dist/leaflet.css';
-import './client.css'
-import { FaUser } from 'react-icons/fa';
-
-
-const OpenStreetMap = ({ latitude, longitude, zoom }) => {
-  return (
-    <MapContainer
-      center={[latitude, longitude]}
-      zoom={zoom}
-      style={{ width: '100%', height: '100%'}}
-    >
-      <TileLayer
-        url="https://{s}.tile.openstreetmap.org/{z}/{x}/{y}.png"
-        attribution='&copy; <a href="https://www.openstreetmap.org/copyright">OpenStreetMap</a> contributors'
-      />
-    </MapContainer>
-  );
-};
-
-
-export const GoogleBox = () => {
-    // Replace with your actual latitude, longitude, and zoom values
-    const latitude = -1.9706;
-    const longitude = 30.1044;
-    const zoom = 12;
+.kigaliBox {
+  height: 100%;
+  display: flex; /* Use flexbox to arrange children horizontally */
   
-    return (
-      <div className='googleBox'>
-        <OpenStreetMap latitude={latitude} longitude={longitude} zoom={zoom} />
-      </div>
-    );
-  };
+}
 
-  const ProfileBox = () => {
-    // Placeholder data
-    const profilePictureUrl = 'https://example.com/profile-picture.jpg'; // Replace with actual URL
-    const name = 'John Doe';
-    const price = '$50';
-    const address = '123 Main St, City';
-  
-    return (
-      <div className="profile-box">
-        <div className="profile-picture">
-          <FaUser/>
-        </div>
-        <div className="profile-info">
-          <div className="name">{name}</div>
-          <div className="address">{address}</div>
-        </div>
-        <div className="price">{price}</div>
-      </div>
-    );
-  };
+.infoBox {
+  flex: 1; /* Take up 50% of the width */
+  height: 100%;
+  border-radius: 15px;
+  background-color: #e3f2fd;
+  align-items: center;
+  text-align: center;
+}
+
+.googleBox {
+  flex: 1; /* Take up 50% of the width */
+  height: 100%;
+  border-radius: 15px;
+  margin-left: 10px;
+}
 
 
-  export const InfoBoxKigali = () =>{
-    return(
-      <div className='infoBox'>
-        <h3>Kigali Services Screen</h3>
-        <div className='profilesBox'>
-          <ProfileBox/>
-          <ProfileBox/>
-          <ProfileBox/>
-        </div>
-      </div>
-    )
+
+
+
+@media only screen and (max-width: 768px) {
+  .kigaliBox {
+    flex-direction: column;
   }
+
+  .infoBox,
+  .googleBox {
+    flex: 1;
+    width: 100%;
+    margin-left: 0; /* Reset margin for smaller screens */
+  }
+}
+
+@media only screen and (max-width: 768px) {
+  .googleBox {
+    margin-left: 0; /* Reset margin for smaller screens */
+  }
+}
+
+
+/* ProfileBox.css */
+.profile-box {
+  display: flex;
+  align-items: center;
+  padding: 10px;
+  border: 1px solid #ccc;
+  border-radius: 8px;
+  margin: 10px;
+}
+
+.profile-picture {
+  margin-right: 10px;
+}
+
+.profile-picture img {
+  width: 50px;
+  height: 50px;
+  border-radius: 50%;
+}
+
+.profile-info {
+  flex: 1;
+}
+
+.name {
+  font-size: 18px;
+  font-weight: bold;
+  margin-bottom: 5px;
+}
+
+.address {
+  font-size: 14px;
+  color: #777;
+}
+
+.price {
+  font-size: 18px;
+  font-weight: bold;
+  color: #009688; /* or any color you prefer */
+}
+
+.profilesBox{
+  background-color: white;
+  padding: 10px;
+  margin: 20px;
+  border-bottom-left-radius: 10px;
+  border-bottom-right-radius: 10px;
+}
