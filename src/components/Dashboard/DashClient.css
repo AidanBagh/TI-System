@@ -36,3 +36,23 @@
     color: black; /* Adjust color for the selected button */
   }
   
+
+
+
+  /* Additional styles for smaller screens */
+@media only screen and (max-width: 768px) {
+  .ver-navbar {
+    flex-direction: row;
+    justify-content: space-around;
+    align-items: center;
+    height: 50px;
+  }
+
+  .ver-navbar p {
+    margin: 5px 10px;
+  }
+
+  .dashclient{
+    flex-direction: column;
+  }
+}
