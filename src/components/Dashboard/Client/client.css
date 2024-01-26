@@ -11,6 +11,8 @@
   height: 100%;
   border-radius: 15px;
   background-color: #e3f2fd;
+  align-items: center;
+  text-align: center;
 }
 
 .googleBox {
@@ -41,4 +43,54 @@
   .googleBox {
     margin-left: 0; /* Reset margin for smaller screens */
   }
+}
+
+
+/* ProfileBox.css */
+.profile-box {
+  display: flex;
+  align-items: center;
+  padding: 10px;
+  border: 1px solid #ccc;
+  border-radius: 8px;
+  margin: 10px;
+}
+
+.profile-picture {
+  margin-right: 10px;
+}
+
+.profile-picture img {
+  width: 50px;
+  height: 50px;
+  border-radius: 50%;
+}
+
+.profile-info {
+  flex: 1;
+}
+
+.name {
+  font-size: 18px;
+  font-weight: bold;
+  margin-bottom: 5px;
+}
+
+.address {
+  font-size: 14px;
+  color: #777;
+}
+
+.price {
+  font-size: 18px;
+  font-weight: bold;
+  color: #009688; /* or any color you prefer */
+}
+
+.profilesBox{
+  background-color: white;
+  padding: 10px;
+  margin: 20px;
+  border-bottom-left-radius: 10px;
+  border-bottom-right-radius: 10px;
 }
