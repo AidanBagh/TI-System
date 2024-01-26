@@ -1,45 +1,29 @@
 // Dashboard.js
-
+import './DashClient.css'
 import React, { useState } from 'react';
-import { LocationSelect, KigaliPage, OutsideKigaliPage, RentMyCarPage } from './Client/Reusable';
+import { KigaliPage, OutsideKigaliPage, RentMyCarPage } from './Client/Reusable';
 
 const DashboardClient = () => {
-  const [selectedLocation, setSelectedLocation] = useState('');
+  const [selectedOption, setSelectedOption] = useState('Kigali');
 
-  const handleLocationSelect = (location) => {
-    setSelectedLocation(location);
-  };
-
-  const handleGoBack = () => {
-    setSelectedLocation('');
+  const handleOptionClick = (option) => {
+    setSelectedOption(option);
   };
 
   return (
     <div>
-      {/* Display the location select option only if a location is not selected */}
-      {selectedLocation === '' ? (
-        <LocationSelect onSelect={handleLocationSelect} />
-      ) : (
-        // Render the selected page along with a button to go back to location select
-        <>
-          {selectedLocation === 'kigali' ? (
-            <>
-              <KigaliPage />
-              <button onClick={handleGoBack}>Go Back</button>
-            </>
-          ) : selectedLocation === 'outside' ? (
-            <>
-              <OutsideKigaliPage />
-              <button onClick={handleGoBack}>Go Back</button>
-            </>
-          ) : selectedLocation === 'rentCar' ? (
-            <>
-              <RentMyCarPage />
-              <button onClick={handleGoBack}>Go Back</button>
-            </>
-          ) : null}
-        </>
-      )}
+      <div style={{ display: 'flex', height: '100vh' }}>
+        <div className='ver-navbar'>
+          <p className={selectedOption === 'Kigali' ? 'selected' : ''} onClick={() => handleOptionClick('Kigali')}>Kigali</p>
+          <p className={selectedOption === 'OutsideKigali' ? 'selected' : ''} onClick={() => handleOptionClick('OutsideKigali')}>Outside Kigali</p>
+          <p className={selectedOption === 'RentMyCar' ? 'selected' : ''} onClick={() => handleOptionClick('RentMyCar')}>Rent My Car</p>
+        </div>
+        <div style={{ flex: 1, padding: '10px' }}>
+          {selectedOption === 'Kigali' && <KigaliPage />}
+          {selectedOption === 'OutsideKigali' && <OutsideKigaliPage />}
+          {selectedOption === 'RentMyCar' && <RentMyCarPage />}
+        </div>
+      </div>
     </div>
   );
 };
