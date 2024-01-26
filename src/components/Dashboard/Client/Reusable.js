@@ -43,20 +43,25 @@ export const KigaliPage = () => {
 
  export const OutsideKigaliPage = () => {
     return (
-      <div>
-        <h2>Welcome to Services Outside Kigali</h2>
-        {/* Add content specific to outside Kigali */}
+      <div className='kigaliBox'>
+      <div className='infoBox'>
+        <InfoBox />
       </div>
+      <div className='googleBox'>
+        <GoogleBox />
+      </div>
+    </div>
     );
   };
 
 
   export const RentMyCarPage = () => {
     return (
-      <div>
-        <h2>Welcome to Services Rent My Car</h2>
-        {/* Add content specific to outside Kigali */}
+      <div className='kigaliBox'>
+      <div className='infoBox'>
+        <InfoBox />
       </div>
+    </div>
     );
   };
   
