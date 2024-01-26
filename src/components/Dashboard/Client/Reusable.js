@@ -2,7 +2,7 @@
 
 import React, { useState } from 'react';
 import './client.css'
-import { GoogleBox } from './Reusable2';
+import { GoogleBox, InfoBox} from './Reusable2';
 
 export const LocationSelect = ({ onSelect }) => {
   const [selectedLocation, setSelectedLocation] = useState('');
@@ -28,13 +28,17 @@ export const LocationSelect = ({ onSelect }) => {
 };
 
 export const KigaliPage = () => {
-    return (
-      <div>
+  return (
+    <div className='kigaliBox'>
+      <div className='infoBox'>
+        <InfoBox />
+      </div>
+      <div className='googleBox'>
         <GoogleBox />
       </div>
-      
-    );
-  };
+    </div>
+  );
+};
 
 
  export const OutsideKigaliPage = () => {
