@@ -94,3 +94,376 @@
   border-bottom-left-radius: 10px;
   border-bottom-right-radius: 10px;
 }
+
+
+
+
+/* BusSchedule.css */
+.bus-schedule {
+  width: 100%;
+  max-width: 600px;
+  margin: auto;
+  padding: 20px;
+  border: 1px solid #ddd;
+  border-radius: 8px;
+  box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+}
+
+.schedule-header,
+.schedule-row {
+  display: flex;
+  justify-content: space-between;
+  padding: 10px 0;
+  border-bottom: 1px solid #eee;
+}
+
+.schedule-header {
+  font-weight: bold;
+}
+
+.time {
+  flex: 1;
+}
+
+.destination {
+  flex: 2;
+}
+
+.platform,
+.status {
+  flex: 1;
+  text-align: center;
+}
+
+/* Optional: Style for delayed status */
+.status {
+  color: #e74c3c; /* Red color for delayed status */
+}
+
+
+/* Add these styles to BusSchedule.css */
+.modal-overlay {
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background: rgba(0, 0, 0, 0.5);
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  z-index: 999;
+}
+
+.modal {
+  background: #fff;
+  padding: 20px;
+  border-radius: 8px;
+  box-shadow: 0 0 10px rgba(0, 0, 0, 0.2);
+}
+
+.modal-content {
+  text-align: center;
+}
+
+.full-details {
+  font-size: 18px;
+  margin-bottom: 10px;
+}
+
+.close-btn {
+  padding: 10px 20px;
+  background-color: #3498db;
+  color: #fff;
+  border: none;
+  border-radius: 4px;
+  cursor: pointer;
+}
+
+.close-btn:hover {
+  background-color: #2980b9;
+}
+
+
+/* SearchBar.css */
+.search-bar {
+  display: flex;
+  margin-bottom: 20px;
+}
+
+input {
+  padding: 10px;
+  flex: 1;
+  border: 1px solid #ccc;
+  border-radius: 4px;
+}
+
+button {
+  padding: 10px 20px;
+  background-color: #3498db;
+  color: #fff;
+  border: none;
+  border-radius: 4px;
+  margin-left: 10px;
+  cursor: pointer;
+}
+
+button:hover {
+  background-color: #2980b9;
+}
+
+
+
+/* SchedulesComponent.css */
+.schedules-container {
+  display: flex;
+  justify-content: space-between;
+}
+
+.schedule-column {
+  flex: 1;
+  padding: 20px;
+  background-color: #f5f5f5;
+  border-radius: 8px;
+  box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+  margin: 5px;
+}
+
+.schedule-item {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  border-bottom: 1px solid #ddd;
+  padding: 10px 0;
+}
+
+.schedule-info {
+  flex: 2;
+}
+
+.schedule-details {
+  flex: 1;
+  text-align: right;
+}
+
+.schedule-time,
+.schedule-destination {
+  font-size: 16px;
+  font-weight: bold;
+}
+
+.schedule-transport,
+.schedule-platform {
+  font-size: 14px;
+  color: #555;
+}
+
+.schedule-status {
+  font-size: 14px;
+  font-weight: bold;
+  padding: 5px 10px;
+  border-radius: 4px;
+}
+
+.schedule-status.on-time {
+  background-color: #4caf50;
+  color: #fff;
+}
+
+.schedule-status.delayed {
+  background-color: #e74c3c;
+  color: #fff;
+}
+
+.schedule-status.scheduled {
+  background-color: #3498db;
+  color: #fff;
+}
+
+/* SchedulesModal.css */
+.modal-overlay {
+  background: rgba(0, 0, 0, 0.5);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.modal-content {
+  background: #fff;
+  padding: 20px;
+  border-radius: 8px;
+  max-width: 400px;
+  width: 100%;
+}
+
+@media only screen and (max-width: 768px) {
+  .schedules-container {
+    flex-direction: column; width: 100%;
+  }
+}
+
+/* DriverListComponent.css */
+.driver-list-container {
+  display: flex;
+  justify-content: space-between;
+  padding: 20px;
+}
+
+.driver-list {
+  width: 40%;
+}
+
+.driver-card {
+  cursor: pointer;
+  border: 1px solid #ccc;
+  border-radius: 8px;
+  margin-bottom: 10px;
+  padding: 10px;
+  transition: background-color 0.3s;
+  max-width: 300px; /* Set a maximum width for the card */
+}
+
+.driver-card:hover {
+  background-color: #f0f0f0;
+}
+
+.driver-info {
+  font-size: 16px;
+}
+
+.modal {
+  display: block;
+  position: fixed;
+  z-index: 1;
+  left: 0;
+  top: 0;
+  width: 100%;
+  height: 100%;
+  overflow: auto;
+  background-color: rgba(0, 0, 0, 0.4);
+}
+
+.modal-content {
+  background-color: #fefefe;
+  margin: 15% auto;
+  padding: 20px;
+  border: 1px solid #888;
+  width: 70%;
+}
+
+.close {
+  color: #aaa;
+  float: right;
+  font-size: 28px;
+  font-weight: bold;
+  cursor: pointer;
+}
+
+.close:hover {
+  color: #000;
+}
+
+/* UserProfileUI.css */
+
+.ui-user-profile {
+  max-width: 600px;
+  margin: 0 auto;
+  padding: 20px;
+  background-color: #fff;
+  box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+  border-radius: 10px;
+}
+
+.ui-profile-header {
+  display: flex;
+  align-items: center;
+  margin-bottom: 20px;
+}
+
+.ui-avatar {
+  width: 50px;
+  height: 50px;
+  border-radius: 50%;
+  margin-right: 20px;
+}
+
+.ui-user-info {
+  flex: 1;
+}
+
+.ui-user-info h2 {
+  margin: 0;
+}
+
+.ui-option {
+  cursor: pointer;
+  padding: 15px;
+  border-radius: 8px;
+  margin-bottom: 10px;
+  box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+  transition: box-shadow 0.3s ease-in-out;
+}
+
+.ui-option h3 {
+  margin: 0;
+  font-size: 18px;
+  margin-bottom: 10px;
+}
+
+.ui-option.active {
+  box-shadow: 0 0 20px rgba(0, 0, 0, 0.2);
+}
+
+.ui-transaction-list,
+.ui-booked-services-list,
+.ui-payment-methods-list,
+.ui-account-statement,
+.ui-settings {
+  list-style: none;
+  padding: 0;
+  margin: 0;
+}
+
+.ui-transaction-list li,
+.ui-booked-services-list li,
+.ui-payment-methods-list li,
+.ui-account-statement,
+.ui-settings {
+  padding: 10px;
+  font-size: 16px;
+  border-bottom: 1px solid #ccc;
+}
+
+.ui-transaction-list li:last-child,
+.ui-booked-services-list li:last-child,
+.ui-payment-methods-list li:last-child {
+  border-bottom: none;
+}
+
+
+
+.cr-container {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  border: 1px solid #ccc;
+  border-radius: 10px;
+  padding: 20px;
+  margin: 20px;
+}
+
+.cr-image img {
+  width: 100%;
+  max-height: 200px; /* Adjust the maximum height as needed */
+  object-fit: cover;
+  border-radius: 10px;
+  margin-bottom: 10px;
+}
+
+.cr-details {
+  text-align: center;
+}
+
+.cr-options {
+  margin-top: 20px;
+}
