@@ -29,7 +29,7 @@ const Signup = () => {
 
       <label htmlFor="password">Password</label>
       <input type="text" id="password" name="password" required className="inputOne" />
-
+      <p>Already a member? <Link to="/login">Login</Link></p>
       <button className="register-btn"><Link to="/">Register</Link></button>
     </div>
     </div>
